@@ -1,0 +1,17 @@
+/ {
+	    
+ dma_proxy_test_0: dma_proxy@0 {
+   	compatible ="xlnx,dma_proxy";
+		dmas = <&axi_dma_0 0
+				&axi_dma_0 1>;
+		dma-names = "dma_proxy_tx_0", "dma_proxy_rx_0";
+	};
+ 
+dma_proxy_test_1: dma_proxy@1 {
+   	compatible ="xlnx,dma_proxy";
+		dmas = <&axi_dma_1 0
+				&axi_dma_1 1>;
+		dma-names = "dma_proxy_tx_1", "dma_proxy_rx_1";
+	};
+
+};

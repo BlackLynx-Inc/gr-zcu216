@@ -1,0 +1,2 @@
+report_utilization -packthru -cells [get_cells {project_1_i/GR_BLOCK0}] -file ./GR_BLOCK0_util.rpt
+report_utilization -packthru -cells [get_cells {project_1_i/axi_dma_0 project_1_i/axi_dma_1 project_1_i/axi_gpio_0 project_1_i/axi_gpio_1 project_1_i/axi_interconnect_2 project_1_i/proc_sys_reset_0 project_1_i/PS_0 project_1_i/smartconnect_0 project_1_i/xlconcat_0 project_1_i/xlconstant_0}] -file ./ThinShell_util.rpt

@@ -1,0 +1,19 @@
+SUMMARY = "A basic image containing zynq-gr features."
+
+require version-image.inc
+
+IMAGE_FEATURES += "splash ssh-server-openssh \
+                   debug-tweaks \
+                  "
+
+EXTRA_IMAGE_FEATURES += "package-management"
+
+LICENSE = "MIT"
+
+CORE_IMAGE_EXTRA_INSTALL = "\
+    dma-proxy-lib \
+    dma-proxy-utils \
+    gr-zynq \
+    "
+
+inherit core-image image-buildinfo

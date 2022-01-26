@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<title>run-ptest\kmod\kmod\recipes-kernel\meta - openembedded-core - OpenEmbedded Core layer</title>
+<meta name='generator' content='cgit v1.2'/>
+<meta name='robots' content='index, nofollow'/>
+<link rel='stylesheet' type='text/css' href='/cgit.css'/>
+<link rel='shortcut icon' href='/favicon.ico'/>
+<link rel='alternate' title='Atom feed' href='http://_/openembedded-core/atom/meta/recipes-kernel/kmod/kmod/run-ptest?h=master' type='application/atom+xml'/>
+<link rel='vcs-git' href='https://git.openembedded.org/openembedded-core' title='openembedded-core Git repository'/>
+<link rel='vcs-git' href='git://git.openembedded.org/openembedded-core' title='openembedded-core Git repository'/>
+</head>
+<body>
+<div id='cgit'><table id='header'>
+<tr>
+<td class='logo' rowspan='2'><a href='/'><img src='/oe.png' alt='cgit logo'/></a></td>
+<td class='main'><a href='/'>index</a> : <a title='openembedded-core' href='/openembedded-core/'>openembedded-core</a></td><td class='form'><form method='get'>
+<select name='h' onchange='this.form.submit();'>
+<option value='2011-1'>2011-1</option>
+<option value='daisy'>daisy</option>
+<option value='danny'>danny</option>
+<option value='denzil'>denzil</option>
+<option value='dizzy'>dizzy</option>
+<option value='dora'>dora</option>
+<option value='dunfell'>dunfell</option>
+<option value='dunfell-next'>dunfell-next</option>
+<option value='dylan'>dylan</option>
+<option value='fido'>fido</option>
+<option value='gatesgarth'>gatesgarth</option>
+<option value='gatesgarth-next'>gatesgarth-next</option>
+<option value='hardknott'>hardknott</option>
+<option value='jethro'>jethro</option>
+<option value='krogoth'>krogoth</option>
+<option value='krogoth-next'>krogoth-next</option>
+<option value='master' selected='selected'>master</option>
+<option value='master-next'>master-next</option>
+<option value='master-next-1.9'>master-next-1.9</option>
+<option value='master-next-2.5'>master-next-2.5</option>
+<option value='master-next2'>master-next2</option>
+<option value='morty'>morty</option>
+<option value='morty-next'>morty-next</option>
+<option value='pyro'>pyro</option>
+<option value='pyro-next'>pyro-next</option>
+<option value='rocko'>rocko</option>
+<option value='rocko-next'>rocko-next</option>
+<option value='sumo'>sumo</option>
+<option value='sumo-next'>sumo-next</option>
+<option value='thud'>thud</option>
+<option value='thud-next'>thud-next</option>
+<option value='warrior'>warrior</option>
+<option value='warrior-next'>warrior-next</option>
+<option value='zeus'>zeus</option>
+<option value='zeus-next'>zeus-next</option>
+</select> <input type='submit' value='switch'/></form></td></tr>
+<tr><td class='sub'>OpenEmbedded Core layer</td><td class='sub right'>OpenEmbedded</td></tr></table>
+<table class='tabs'><tr><td>
+<a href='/openembedded-core/'>summary</a><a href='/openembedded-core/refs/'>refs</a><a href='/openembedded-core/log/meta/recipes-kernel/kmod/kmod/run-ptest'>log</a><a class='active' href='/openembedded-core/tree/meta/recipes-kernel/kmod/kmod/run-ptest'>tree</a><a href='/openembedded-core/commit/meta/recipes-kernel/kmod/kmod/run-ptest'>commit</a><a href='/openembedded-core/diff/meta/recipes-kernel/kmod/kmod/run-ptest'>diff</a><a href='/openembedded-core/stats/meta/recipes-kernel/kmod/kmod/run-ptest'>stats</a></td><td class='form'><form class='right' method='get' action='/openembedded-core/log/meta/recipes-kernel/kmod/kmod/run-ptest'>
+<select name='qt'>
+<option value='grep'>log msg</option>
+<option value='author'>author</option>
+<option value='committer'>committer</option>
+<option value='range'>range</option>
+</select>
+<input class='txt' type='search' size='10' name='q' value=''/>
+<input type='submit' value='search'/>
+</form>
+</td></tr></table>
+<div class='path'>path: <a href='/openembedded-core/tree/'>root</a>/<a href='/openembedded-core/tree/meta'>meta</a>/<a href='/openembedded-core/tree/meta/recipes-kernel'>recipes-kernel</a>/<a href='/openembedded-core/tree/meta/recipes-kernel/kmod'>kmod</a>/<a href='/openembedded-core/tree/meta/recipes-kernel/kmod/kmod'>kmod</a>/<a href='/openembedded-core/tree/meta/recipes-kernel/kmod/kmod/run-ptest'>run-ptest</a></div><div class='content'>blob: 598dd2cb5fbad194a135e5d06601847e00df1586 (<a href='/openembedded-core/plain/meta/recipes-kernel/kmod/kmod/run-ptest'>plain</a>)
+<table summary='blob content' class='blob'>
+<tr><td class='linenumbers'><pre><a id='n1' href='#n1'>1</a>
+<a id='n2' href='#n2'>2</a>
+<a id='n3' href='#n3'>3</a>
+<a id='n4' href='#n4'>4</a>
+<a id='n5' href='#n5'>5</a>
+</pre></td>
+<td class='lines'><pre><code><style>.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #888888 } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { color: #008800; font-weight: bold } /* Keyword */
+.highlight .ch { color: #888888 } /* Comment.Hashbang */
+.highlight .cm { color: #888888 } /* Comment.Multiline */
+.highlight .cp { color: #cc0000; font-weight: bold } /* Comment.Preproc */
+.highlight .cpf { color: #888888 } /* Comment.PreprocFile */
+.highlight .c1 { color: #888888 } /* Comment.Single */
+.highlight .cs { color: #cc0000; font-weight: bold; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #333333 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #666666 } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { color: #008800; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008800; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008800; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008800 } /* Keyword.Pseudo */
+.highlight .kr { color: #008800; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #888888; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #0000DD; font-weight: bold } /* Literal.Number */
+.highlight .s { color: #dd2200; background-color: #fff0f0 } /* Literal.String */
+.highlight .na { color: #336699 } /* Name.Attribute */
+.highlight .nb { color: #003388 } /* Name.Builtin */
+.highlight .nc { color: #bb0066; font-weight: bold } /* Name.Class */
+.highlight .no { color: #003366; font-weight: bold } /* Name.Constant */
+.highlight .nd { color: #555555 } /* Name.Decorator */
+.highlight .ne { color: #bb0066; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0066bb; font-weight: bold } /* Name.Function */
+.highlight .nl { color: #336699; font-style: italic } /* Name.Label */
+.highlight .nn { color: #bb0066; font-weight: bold } /* Name.Namespace */
+.highlight .py { color: #336699; font-weight: bold } /* Name.Property */
+.highlight .nt { color: #bb0066; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #336699 } /* Name.Variable */
+.highlight .ow { color: #008800 } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #0000DD; font-weight: bold } /* Literal.Number.Bin */
+.highlight .mf { color: #0000DD; font-weight: bold } /* Literal.Number.Float */
+.highlight .mh { color: #0000DD; font-weight: bold } /* Literal.Number.Hex */
+.highlight .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
+.highlight .mo { color: #0000DD; font-weight: bold } /* Literal.Number.Oct */
+.highlight .sb { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Backtick */
+.highlight .sc { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Char */
+.highlight .sd { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Doc */
+.highlight .s2 { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Double */
+.highlight .se { color: #0044dd; background-color: #fff0f0 } /* Literal.String.Escape */
+.highlight .sh { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Heredoc */
+.highlight .si { color: #3333bb; background-color: #fff0f0 } /* Literal.String.Interpol */
+.highlight .sx { color: #22bb22; background-color: #f0fff0 } /* Literal.String.Other */
+.highlight .sr { color: #008800; background-color: #fff0ff } /* Literal.String.Regex */
+.highlight .s1 { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Single */
+.highlight .ss { color: #aa6600; background-color: #fff0f0 } /* Literal.String.Symbol */
+.highlight .bp { color: #003388 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #336699 } /* Name.Variable.Class */
+.highlight .vg { color: #dd7700 } /* Name.Variable.Global */
+.highlight .vi { color: #3333bb } /* Name.Variable.Instance */
+.highlight .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span class="ch">#!/bin/sh</span>
+touch testsuite/stamp-rootfs
+tar xf testmodule.tar
+make -k runtest-TESTS 2&gt;/dev/null<span class="p">|</span> grep -e ^PASS -e ^FAIL
+find testsuite -name *.ko -exec rm -f <span class="o">{}</span> <span class="se">\;</span>
+</pre></div>
+</code></pre></td></tr></table>
+</div> <!-- class=content -->
+<div class='footer'>generated by <a href='https://git.zx2c4.com/cgit/about/'>cgit v1.2</a> (<a href='https://git-scm.com/'>git 2.18.0</a>) at 2021-03-23 15:48:53 +0000</div>
+</div> <!-- id=cgit -->
+</body>
+</html>

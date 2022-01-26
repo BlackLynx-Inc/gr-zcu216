@@ -1,0 +1,281 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:07 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 20781
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Aug 16 10:57:26 EDT 2021
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Ubuntu
+OS Version: 4.4.0-131-generic
+OS Architecture: amd64
+Available processors (cores): 44
+
+Display: localhost:12.0
+Screen size: 1536x864
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	/ryftone/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2
+Java executable: 	/ryftone/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ryftuser
+User home directory: /home/ryftuser
+User working directory: /ryftone/chintan/darpa/github/branch_2021_080221/hardware-tim/fft-float-complex
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /ryftone/opt/Xilinx/Vivado
+HDI_APPROOT: /ryftone/opt/Xilinx/Vivado/2021.1
+RDI_DATADIR: /ryftone/opt/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: /ryftone/opt/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: /home/ryftuser/.Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: /home/ryftuser/.Xilinx/Vivado/2021.1/
+Vivado layouts directory: /home/ryftuser/.Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	/ryftone/opt/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	/ryftone/chintan/darpa/github/branch_2021_080221/hardware-tim/fft-float-complex/vivado.log
+Vivado journal file: 	/ryftone/chintan/darpa/github/branch_2021_080221/hardware-tim/fft-float-complex/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-20781-buildserver8
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /ryftone/opt/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@SRV007
+XILINX_2017_4_OP_SDx_HOME: /ryftone/opt/Xilinx/SDx/2017.4.op
+XILINX_2018_2_SDx_HOME: /ryftone/opt/Xilinx/SDx/2018.2
+XILINX_2018_3_HOME: /ryftone/opt/Xilinx/Vivado/2018.3
+XILINX_2018_3_SDx_HOME: /ryftone/opt/Xilinx/SDx/2018.3
+XILINX_2019_1_SDx_HOME: /ryftone/opt/Xilinx/SDx/2019.1
+XILINX_2020_1_Vitis_HOME: /ryftone/opt/Xilinx/Vitis/2020.1
+XILINX_2020_2_Vitis_HOME: /ryftone/opt/Xilinx/Vitis/2020.2
+XILINX_2021_1_HOME: /ryftone/opt/Xilinx/Vivado/2021.1
+XILINX_2021_1_Vitis_HOME: /ryftone/opt/Xilinx/Vitis_HLS/2021.1
+XILINX_DSP: /ryftone/opt/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: /ryftone/opt/Xilinx/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: /ryftone/opt/Xilinx/Vivado/2021.1
+XILINX_VITIS: 
+XILINX_VIVADO: /ryftone/opt/Xilinx/Vivado/2021.1
+XILINX_VIVADO_HLS: /ryftone/opt/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 5,855 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 5,860 MB. GUI used memory: 69 MB. Current time: 8/16/21, 10:57:27 AM EDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // af
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ak
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open..."); // an
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // af
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// WARNING: HEventQueue.dispatchEvent() is taking  1249 ms.
+// Elapsed time: 42 seconds
+setFileChooser("/ryftone/chintan/darpa/github/branch_2021_080221/hardware-tim/fft-float-complex/gnuradio-zcu106-2021.1/xilinx-zcu106-2021.1.xpr");
+// [GUI Memory]: 89 MB (+91066kb) [00:06:09]
+// [Engine Memory]: 5,862 MB (+5995690kb) [00:06:09]
+// Opening Vivado Project: /ryftone/chintan/darpa/github/branch_2021_080221/hardware-tim/fft-float-complex/gnuradio-zcu106-2021.1/xilinx-zcu106-2021.1.xpr. Version: Vivado v2021.1 
+// bz (cs):  Open Project : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1432 ms.
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project /ryftone/chintan/darpa/github/branch_2021_080221/hardware-tim/fft-float-complex/gnuradio-zcu106-2021.1/xilinx-zcu106-2021.1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 106 MB (+12685kb) [00:06:21]
+// [GUI Memory]: 128 MB (+17387kb) [00:06:21]
+// [GUI Memory]: 143 MB (+9297kb) [00:06:23]
+// WARNING: HEventQueue.dispatchEvent() is taking  3706 ms.
+// Tcl Message: open_project /ryftone/chintan/darpa/github/branch_2021_080221/hardware-tim/fft-float-complex/gnuradio-zcu106-2021.1/xilinx-zcu106-2021.1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/ryftone/tim/branch_2021_080221/hardware/fft-float-complex/gnuradio-zcu106-2021.1' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/ryftone/chintan/darpa/github/branch_2021_080221/hardware-tim/lib'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ryftone/opt/Xilinx/Vivado/2021.1/data/ip'. 
+// [GUI Memory]: 155 MB (+5379kb) [00:06:25]
+// WARNING: HEventQueue.dispatchEvent() is taking  1264 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 6,161 MB. GUI used memory: 115 MB. Current time: 8/16/21, 11:03:38 AM EDT
+// [Engine Memory]: 6,161 MB (+5377kb) [00:06:26]
+// Tcl Message: INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:14 . Memory (MB): peak = 7803.812 ; gain = 263.766 ; free physical = 46043 ; free virtual = 354654 
+// Project name: xilinx-zcu106-2021.1; location: /ryftone/chintan/darpa/github/branch_2021_080221/hardware-tim/fft-float-complex/gnuradio-zcu106-2021.1; part: xczu7ev-ffvc1156-2-e
+// 'j' command handler elapsed time: 60 seconds
+// [GUI Memory]: 165 MB (+2107kb) [00:06:27]
+// Elapsed time: 18 seconds
+dismissDialog("Open Project"); // bz
+// [Engine Memory]: 6,705 MB (+247644kb) [00:06:30]
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, project_1_wrapper (project_1_wrapper.v)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, project_1_wrapper (project_1_wrapper.v), project_1_i : project_1 (project_1.bd)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, project_1_wrapper (project_1_wrapper.v), project_1_i : project_1 (project_1.bd)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+// bz (cs):  Open Block Design : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1151 ms.
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: open_bd_design {/ryftone/chintan/darpa/github/branch_2021_080221/hardware-tim/fft-float-complex/gnuradio-zcu106-2021.1/xilinx-zcu106-2021.1.srcs/sources_1/bd/project_1/project_1.bd} 
+// Tcl Message: Reading block design file </ryftone/chintan/darpa/github/branch_2021_080221/hardware-tim/fft-float-complex/gnuradio-zcu106-2021.1/xilinx-zcu106-2021.1.srcs/sources_1/bd/project_1/project_1.bd>... 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: INFO: [xilinx.com:ip:ila:6.2-6] /GR_BLOCK0/ILA_Config: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details. 
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  3085 ms.
+// JavaFX intialization before: 1629126239612
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 8802.316 ; gain = 0.000 ; free physical = 43961 ; free virtual = 352587 
+// [GUI Memory]: 176 MB (+2814kb) [00:06:48]
+// JavaFX initialization after: 1629126246626
+// HMemoryUtils.trashcanNow. Engine heap size: 7,487 MB. GUI used memory: 126 MB. Current time: 8/16/21, 11:04:07 AM EDT
+// [Engine Memory]: 7,518 MB (+501198kb) [00:06:57]
+// Elapsed time: 104 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Create Block Design]", 6, false); // o
+// Run Command: PAResourceCommand.PACommandNames_CREATE_NEW_DIAGRAM
+// bq (cs): Create Block Design: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1168 ms.
+// [GUI Memory]: 185 MB (+216kb) [00:10:27]

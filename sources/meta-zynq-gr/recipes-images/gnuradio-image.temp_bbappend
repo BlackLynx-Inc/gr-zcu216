@@ -1,0 +1,3 @@
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+
+IMAGE_INSTALL_append += "dma-proxy-lib dma-proxy-utils gr-zynq" 
