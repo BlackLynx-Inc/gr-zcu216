@@ -109,6 +109,18 @@ do_configure_append_zcu106-zynqmp() {
         fi
 }
 
+SRC_URI_append_zcu216-zynqmp = "\
+    file://system-user.dtsi \
+"
+
+do_configure_append_zcu216-zynqmp() {
+        if [ -e ${WORKDIR}/system-user.dtsi ]; then
+               cp ${WORKDIR}/system-user.dtsi ${DT_FILES_PATH}/system-user.dtsi
+               echo '/include/ "system-user.dtsi"' >> ${DT_FILES_PATH}/system-top.dts
+        fi
+}
+
+
 
 do_compile_prepend() {
     listpath = d.getVar("DT_FILES_PATH")
