@@ -1,4 +1,4 @@
-# gr-zcu106 Read Me
+# gr-zcu216 Read Me
 
 Follow the steps below to create a Yocto Linux image for Xilinx ZCU106 platform with GNU radio built in the filesystem using OE meta-sdr layer
 
@@ -6,11 +6,11 @@ Follow the steps below to create a Yocto Linux image for Xilinx ZCU106 platform 
 
 1. Clone repo:
 ```bash
-    $ git clone https://github.com/BlackLynx-Inc/gr-zcu106.git
+    $ git clone https://github.com/BlackLynx-Inc/gr-zcu216.git
 ```
 2. Go to top-level directory:
 ```bash
-    $ cd gr-zcu106
+    $ cd gr-zcu216
 ```
 3. Source setup script:
 ```bash
