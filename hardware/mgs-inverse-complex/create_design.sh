@@ -9,11 +9,11 @@
 ###     help      - Prints the command syntax.
 ###     clean     - Deletes the current project
 ###     update    - The update option copies the source files from the specified
-###                 path to the project creation sources ./xilinx-zcu106-2021.1.srcs
+###                 path to the project creation sources ./xilinx-zcu216-2021.1.srcs
 ###                 A second option can be specified with update, it is the path to the
 ###                 sources used for updating. If a second option is not specified with
 ###                 update, ${source_path} is used
-###     no option - Generates a Vivado project from ./xilinx-zcu106-2021.1.srcs
+###     no option - Generates a Vivado project from ./xilinx-zcu216-2021.1.srcs
 ###
 ###
 #########################################################################################
@@ -36,7 +36,7 @@ UNDERLINE=$(tput smul)
 
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
 
-source_path=${2:-./gnuradio-zcu106-2021.1/xilinx-zcu106-2021.1.srcs}
+source_path=${2:-./gnuradio-zcu216-2021.1/xilinx-zcu216-2021.1.srcs}
 strategy=${2:-0}
 
 # Select which version of Xilinx Vivado to use
@@ -53,9 +53,9 @@ CMD_EXPLOREREMAP="vivado -mode batch -source ExploreWithRemap.tcl"
 
 case "$1" in
    help)
-     printf "%b" "${GREEN}Syntax: ./create_design.sh [clean|help|update [path/to/updated/xilinx-zcu106-2021.1.srcs]|build [0(Vivado Default)|1(ExtraTimingOpt)|2(ExploreWithRemap)]]${NORMAL}\n"
+     printf "%b" "${GREEN}Syntax: ./create_design.sh [clean|help|update [path/to/updated/xilinx-zcu216-2021.1.srcs]|build [0(Vivado Default)|1(ExtraTimingOpt)|2(ExploreWithRemap)]]${NORMAL}\n"
      printf "\n"
-     printf "%b" "${GREEN}The update option copies the source files from the specified path to the project creation sources ./xilinx-zcu106-2021.1.srcs${NORMAL}\n"
+     printf "%b" "${GREEN}The update option copies the source files from the specified path to the project creation sources ./xilinx-zcu216-2021.1.srcs${NORMAL}\n"
      printf "%b" "${GREEN}A second option can be specified with update, it is the path to the sources used for updating.${NORMAL}\n"
      printf "%b" "${GREEN}If a second option is not specified with update, ${source_path} is used.${NORMAL}\n"
      printf "\n"
@@ -74,20 +74,20 @@ case "$1" in
          rm -f *.jou
          rm -rf .Xil
          rm -rf .cache
-         rm -rf gnuradio-zcu106-2021.1
+         rm -rf gnuradio-zcu216-2021.1
       else
          printf "${GREEN}The project has been preserved.${NORMAL}\n"
       fi
    ;;
    update)
-      read -p "${YELLOW}./xilinx-zcu106-2021.1.srcs will be overwritten with ${source_path}. Continue? [yes/no]${NORMAL}"
+      read -p "${YELLOW}./xilinx-zcu216-2021.1.srcs will be overwritten with ${source_path}. Continue? [yes/no]${NORMAL}"
       if [ "$REPLY" = "yes" ]; then
-         cp -rf ${source_path}/sources_1/imports/hdl/project_1_wrapper.v ./xilinx-zcu106-2021.1.srcs/sources_1/imports/hdl/project_1_wrapper.v
-         cp -rf ${source_path}/sources_1/bd/project_1/project_1.bd ./xilinx-zcu106-2021.1.srcs/sources_1/bd/project_1/project_1.bd
-         cp -rf ${source_path}/constrs_1/imports/xdc/default.xdc ./xilinx-zcu106-2021.1.srcs/constrs_1/imports/xdc/default.xdc
-         cp -rf ${source_path}/constrs_1/imports/xdc/vcu_uc2_pll.xdc ./xilinx-zcu106-2021.1.srcs/constrs_1/imports/xdc/vcu_uc2_pll.xdc
+         cp -rf ${source_path}/sources_1/imports/hdl/project_1_wrapper.v ./xilinx-zcu216-2021.1.srcs/sources_1/imports/hdl/project_1_wrapper.v
+         cp -rf ${source_path}/sources_1/bd/project_1/project_1.bd ./xilinx-zcu216-2021.1.srcs/sources_1/bd/project_1/project_1.bd
+         cp -rf ${source_path}/constrs_1/imports/xdc/default.xdc ./xilinx-zcu216-2021.1.srcs/constrs_1/imports/xdc/default.xdc
+         cp -rf ${source_path}/constrs_1/imports/xdc/vcu_uc2_pll.xdc ./xilinx-zcu216-2021.1.srcs/constrs_1/imports/xdc/vcu_uc2_pll.xdc
       else
-         printf "${GREEN}The project generation source files ./xilinx-zcu106-2021.1.srcs preserved.${NORMAL}\n"
+         printf "${GREEN}The project generation source files ./xilinx-zcu216-2021.1.srcs preserved.${NORMAL}\n"
       fi
    ;;
    build)
@@ -99,20 +99,20 @@ case "$1" in
       fi
 
       if [ "$2" -eq "2" ]; then
-         printf "%b" "${GREEN}Generating GNU Radio ZCU106 FPGA project using Xilinx Tools path ${VIVADO_VER}. Implemetation Strategy: ExtraTimingOpt.${NORMAL}\n"
+         printf "%b" "${GREEN}Generating GNU Radio ZCU216 FPGA project using Xilinx Tools path ${VIVADO_VER}. Implemetation Strategy: ExtraTimingOpt.${NORMAL}\n"
          source $VIVADO_VER/settings64.sh
          $CMD_EXPLOREREMAP
-         printf "%b" "${GREEN}Done Generating GNU Radio ZCU106 FPGA project.${NORMAL}\n"
+         printf "%b" "${GREEN}Done Generating GNU Radio ZCU216 FPGA project.${NORMAL}\n"
       elif [ "$2" -eq "1" ]; then
-         printf "%b" "${GREEN}Generating GNU Radio ZCU106 FPGA project using Xilinx Tools path ${VIVADO_VER}. Implemetation Strategy: ExploreWithRemap.${NORMAL}\n"
+         printf "%b" "${GREEN}Generating GNU Radio ZCU216 FPGA project using Xilinx Tools path ${VIVADO_VER}. Implemetation Strategy: ExploreWithRemap.${NORMAL}\n"
          source $VIVADO_VER/settings64.sh
          $CMD_EXTRATIMINGOPT
-         printf "%b" "${GREEN}Done Generating GNU Radio ZCU106 FPGA project.${NORMAL}\n"
+         printf "%b" "${GREEN}Done Generating GNU Radio ZCU216 FPGA project.${NORMAL}\n"
       else
-         printf "%b" "${GREEN}Generating GNU Radio ZCU106 FPGA project using Xilinx Tools path ${VIVADO_VER}. Implemetation Strategy: Vivado Defaults.${NORMAL}\n"
+         printf "%b" "${GREEN}Generating GNU Radio ZCU216 FPGA project using Xilinx Tools path ${VIVADO_VER}. Implemetation Strategy: Vivado Defaults.${NORMAL}\n"
          source $VIVADO_VER/settings64.sh
          $CMD_DEFAULT
-         printf "%b" "${GREEN}Done Generating GNU Radio ZCU106 FPGA project.${NORMAL}\n"
+         printf "%b" "${GREEN}Done Generating GNU Radio ZCU216 FPGA project.${NORMAL}\n"
       fi
    ;;
    *)
@@ -123,9 +123,9 @@ case "$1" in
          cd ${scriptdir}
       fi
 
-      printf "%b" "${GREEN}Generating GNU Radio ZCU106 FPGA project using Xilinx Tools path ${VIVADO_VER}. Implemetation Strategy: Vivado Defaults.${NORMAL}\n"
+      printf "%b" "${GREEN}Generating GNU Radio ZCU216 FPGA project using Xilinx Tools path ${VIVADO_VER}. Implemetation Strategy: Vivado Defaults.${NORMAL}\n"
       source $VIVADO_VER/settings64.sh
       $CMD_DEFAULT
-      printf "%b" "${GREEN}Done Generating GNU Radio ZCU106 FPGA project.${NORMAL}\n"
+      printf "%b" "${GREEN}Done Generating GNU Radio ZCU216 FPGA project.${NORMAL}\n"
    ;;
 esac

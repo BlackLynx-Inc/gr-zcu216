@@ -9,10 +9,10 @@
 #
 # 2. The following source(s) files that were local or imported into the original project.
 #
-#    "./xilinx-zcu106-2021.1.srcs/sources_1/bd/project_1/project_1.bd"
-#    "./xilinx-zcu106-2021.1.srcs/sources_1/imports/hdl/project_1_wrapper.v"
-#    "./xilinx-zcu106-2021.1.srcs/constrs_1/imports/xdc/vcu_uc2_pll.xdc"
-#    "./xilinx-zcu106-2021.1.srcs/constrs_1/imports/xdc/default.xdc"
+#    "./xilinx-zcu216-2021.1.srcs/sources_1/bd/project_1/project_1.bd"
+#    "./xilinx-zcu216-2021.1.srcs/sources_1/imports/hdl/project_1_wrapper.v"
+#    "./xilinx-zcu216-2021.1.srcs/constrs_1/imports/xdc/vcu_uc2_pll.xdc"
+#    "./xilinx-zcu216-2021.1.srcs/constrs_1/imports/xdc/default.xdc"
 #
 # 3. The following remote source files that were added to the original project.
 #
@@ -29,8 +29,8 @@ if { [info exists ::origin_dir_loc] } {
 }
 
 # Set the project name
-set _xil_proj_name_ "xilinx-zcu106-2021.1"
-set _xil_proj_dir_ "gnuradio-zcu106-2021.1"
+set _xil_proj_name_ "xilinx-zcu216-2021.1"
+set _xil_proj_dir_ "gnuradio-zcu216-2021.1"
 
 # Use project name variable, if specified in the tcl shell
 if { [info exists ::user_project_name] } {
@@ -86,17 +86,17 @@ if { $::argc > 0 } {
 }
 
 # Set the directory path for the original project from where this script was exported
-set orig_proj_dir "[file normalize "$origin_dir/gnuradio-zcu106-2021.1"]"
+set orig_proj_dir "[file normalize "$origin_dir/gnuradio-zcu216-2021.1"]"
 
 # Create project
-create_project -force ${_xil_proj_name_} ./${_xil_proj_dir_} -part xczu7ev-ffvc1156-2-e
+create_project -force ${_xil_proj_name_} ./${_xil_proj_dir_} -part xczu49dr-ffvf1760-2-e
 
 # Set the directory path for the new project
 set proj_dir [get_property directory [current_project]]
 
 # Set project properties
 set obj [current_project]
-set_property -name "board_part" -value "xilinx.com:zcu106:part0:2.5" -objects $obj
+set_property -name "board_part" -value "xilinx.com:zcu216:part0:2.0" -objects $obj
 set_property -name "default_lib" -value "xil_defaultlib" -objects $obj
 set_property -name "enable_vhdl_2008" -value "1" -objects $obj
 set_property -name "ip_cache_permissions" -value "read write" -objects $obj
@@ -132,8 +132,8 @@ if { $obj != {} } {
 set obj [get_filesets sources_1]
 # Import local files from the original project
 set files [list \
- [file normalize "${origin_dir}/xilinx-zcu106-2021.1.srcs/sources_1/bd/project_1/project_1.bd"]\
- [file normalize "${origin_dir}/xilinx-zcu106-2021.1.srcs/sources_1/imports/hdl/project_1_wrapper.v"]\
+ [file normalize "${origin_dir}/xilinx-zcu216-2021.1.srcs/sources_1/bd/project_1/project_1.bd"]\
+ [file normalize "${origin_dir}/xilinx-zcu216-2021.1.srcs/sources_1/imports/hdl/project_1_wrapper.v"]\
 ]
 set imported_files [import_files -fileset sources_1 $files]
 
@@ -160,14 +160,14 @@ if {[string equal [get_filesets -quiet constrs_1] ""]} {
 set obj [get_filesets constrs_1]
 
 # Add/Import constrs file and set constrs file properties
-set file "[file normalize ${origin_dir}/xilinx-zcu106-2021.1.srcs/constrs_1/imports/xdc/vcu_uc2_pll.xdc]"
+set file "[file normalize ${origin_dir}/xilinx-zcu216-2021.1.srcs/constrs_1/imports/xdc/vcu_uc2_pll.xdc]"
 set file_imported [import_files -fileset constrs_1 [list $file]]
 set file "xdc/vcu_uc2_pll.xdc"
 set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
 set_property -name "file_type" -value "XDC" -objects $file_obj
 
 # Add/Import constrs file and set constrs file properties
-set file "[file normalize ${origin_dir}/xilinx-zcu106-2021.1.srcs/constrs_1/imports/xdc/default.xdc]"
+set file "[file normalize ${origin_dir}/xilinx-zcu216-2021.1.srcs/constrs_1/imports/xdc/default.xdc]"
 set file_imported [import_files -fileset constrs_1 [list $file]]
 set file "xdc/default.xdc"
 set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
@@ -202,7 +202,7 @@ set obj [get_filesets utils_1]
 
 # Create 'synth_1' run (if not found)
 if {[string equal [get_runs -quiet synth_1] ""]} {
-    create_run -name synth_1 -part xczu7ev-ffvc1156-2-e -flow {Vivado Synthesis 2021} -strategy "Vivado Synthesis Defaults" -report_strategy {No Reports} -constrset constrs_1
+    create_run -name synth_1 -part xczu49dr-ffvf1760-2-e -flow {Vivado Synthesis 2021} -strategy "Vivado Synthesis Defaults" -report_strategy {No Reports} -constrset constrs_1
 } else {
   set_property strategy "Vivado Synthesis Defaults" [get_runs synth_1]
   set_property flow "Vivado Synthesis 2021" [get_runs synth_1]
@@ -220,7 +220,7 @@ if { $obj != "" } {
 
 }
 set obj [get_runs synth_1]
-set_property -name "part" -value "xczu7ev-ffvc1156-2-e" -objects $obj
+set_property -name "part" -value "xczu49dr-ffvf1760-2-e" -objects $obj
 set_property -name "strategy" -value "Vivado Synthesis Defaults" -objects $obj
 
 # set the current synth run
@@ -228,7 +228,7 @@ current_run -synthesis [get_runs synth_1]
 
 # Create 'impl_1' run (if not found)
 if {[string equal [get_runs -quiet impl_1] ""]} {
-    create_run -name impl_1 -part xczu7ev-ffvc1156-2-e -flow {Vivado Implementation 2021} -strategy "Vivado Implementation Defaults" -report_strategy {No Reports} -constrset constrs_1 -parent_run synth_1
+    create_run -name impl_1 -part xczu49dr-ffvf1760-2-e -flow {Vivado Implementation 2021} -strategy "Vivado Implementation Defaults" -report_strategy {No Reports} -constrset constrs_1 -parent_run synth_1
 } else {
   set_property strategy "Vivado Implementation Defaults" [get_runs impl_1]
   set_property flow "Vivado Implementation 2021" [get_runs impl_1]

@@ -1,4 +1,4 @@
-Create a Vivado 2020.1 Embedded GNU Radio FPGA project for the Xilinx ZCU106 card.
+Create a Vivado 2020.1 Embedded GNU Radio FPGA project for the Xilinx ZCU216 card.
 
 1) Export the XILINX_2020_1_SDx_HOME environment variable to point to the Vivado install
 
