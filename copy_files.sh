@@ -2,10 +2,10 @@
 
 # Default base mount point path that will be created and used if needed
 MOUNT_POINT_BASE=/mnt/sdcard
-FILE_BASE=build/tmp/deploy/images/zcu106-zynqmp/
+FILE_BASE=build/tmp/deploy/images/zcu216-zynqmp/
 
 BOOT_FILES="boot.scr boot.bin system.dtb Image"
-ROOTFS_FILE="petalinux-image-gr-zcu106-zynqmp.tar.gz"
+ROOTFS_FILE="petalinux-image-gr-zcu216-zynqmp.tar.gz"
 
 error() {
   printf '\E[31m'; echo "$@"; printf '\E[0m'
